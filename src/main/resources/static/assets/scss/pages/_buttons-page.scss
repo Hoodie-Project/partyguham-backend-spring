@@ -1,0 +1,561 @@
+/** General Buttons **/
+.gi-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    .gi-btn {
+        margin: 5px;
+    }
+}
+/** Gradient Buttons **/
+.gradient-btn {
+    background-size: 300% 100%;
+    color: $fff;
+}
+.gradient-btn.color-primary-gradient {
+    @include ease3;
+    background-image: linear-gradient(#9096f1,#5f6af5, #9096f1);
+    &:hover {
+        opacity: .8;
+    }
+}
+.gradient-btn.color-secondary-gradient {
+    @include ease3;
+    background-image: linear-gradient(#fa92ad, #ff4f7f, #fa92ad);
+    &:hover {
+        opacity: .8;
+    }
+}
+.gradient-btn.color-success-gradient {
+    @include ease3;
+    background-image: linear-gradient(#81d3bc, #2bbb93, #81d3bc);
+    &:hover {
+        opacity: .8;
+    }
+}
+.gradient-btn.color-info-gradient {
+    @include ease3;
+    background-image: linear-gradient(#91e4fe, #50d1f8, #91e4fe);
+    &:hover {
+        opacity: .8;
+    }
+}
+.gradient-btn.color-warning-gradient {
+    @include ease3;
+    background-image: linear-gradient(#fabc86, #ffa04f, #fabc86);
+    &:hover {
+        opacity: .8;
+    }
+}
+.gradient-btn.color-danger-gradient {
+    @include ease3;
+    background-image: linear-gradient(#f87070, #fb2f2f,#f87070);
+    &:hover {
+        opacity: .8;
+    }
+}
+.gradient-btn.color-dark-gradient {
+    @include ease3;
+    background-image: linear-gradient(#556887, #1d2531, #556887);
+    &:hover {
+        opacity: .8;
+    }
+}
+.gradient-btn.color-light-gradient {
+    @include ease3;
+    background-image: linear-gradient(#eee, #ccc, #eee);
+    color: $text-777;
+    &:hover {
+        opacity: .8;
+    }
+}
+/** Gradient animated Buttons **/
+.gradient-animate-btn {
+    background-size: 300% 100%;
+    color: $fff;
+}
+.gradient-animate-btn.color-primary-gradient {
+    @include ease3;
+    background-image: linear-gradient(to right, #5f6af5, #9ca3ff, #9096f1, #6e75d2);
+    &:hover {
+        background-position: 100% 0;
+    }
+}
+.gradient-animate-btn.color-secondary-gradient {
+    @include ease3;
+    background-image: linear-gradient(to right, #ff4f7f, #fa92ad, #fe91ae, #ff4f7f);
+    &:hover {
+        background-position: 100% 0;
+    }
+}
+.gradient-animate-btn.color-success-gradient {
+    @include ease3;
+    background-image: linear-gradient(to right, #2bbb93, #81d3bc, #6bbaa3, #59bca0);
+    &:hover {
+        background-position: 100% 0;
+    }
+}
+.gradient-animate-btn.color-info-gradient {
+    @include ease3;
+    background-image: linear-gradient(to right, #50d1f8, #91e4fe, #89e2fd, #50d1f8);
+    &:hover {
+        background-position: 100% 0;
+    }
+}
+.gradient-animate-btn.color-warning-gradient {
+    @include ease3;
+    background-image: linear-gradient(to right, #ffa04f, #fabc86, #febe86, #ffa04f);
+    &:hover {
+        background-position: 100% 0;
+    }
+}
+.gradient-animate-btn.color-danger-gradient {
+    @include ease3;
+    background-image: linear-gradient(to right, #fb2f2f, #f87070, #f98383, #ff4f4f);
+    &:hover {
+        background-position: 100% 0;
+    }
+}
+.gradient-animate-btn.color-dark-gradient {
+    @include ease3;
+    background-image: linear-gradient(to right, #1d2531, #556887, #465770, #2b3647);
+    &:hover {
+        background-position: 100% 0;
+    }
+}
+.gradient-animate-btn.color-light-gradient {
+    @include ease3;
+    background-image: linear-gradient(to right, #ccc, #eee, #eee, #ccc);
+    color: $text-777;
+    &:hover {
+        background-position: 100% 0;
+    }
+}
+
+/** Defoult Buttons **/
+.default-btn {
+    color: $fff;
+}
+.default-btn.color-primary {
+    @include ease3;
+    background-color: #5f6af5;
+    border: 1px solid #5f6af5;
+    &:hover {
+        background-color: $fff;
+        color: #5f6af5;
+    }
+}
+.default-btn.color-secondary {
+    @include ease3;
+    background-color: #ff4f7f;
+    border: 1px solid #ff4f7f;
+    &:hover {
+        background-color: $fff;
+        color: #ff4f7f;
+    }
+}
+.default-btn.color-success {
+    @include ease3;
+    background-color: #2bbb93;
+    border: 1px solid #2bbb93;
+    &:hover {
+        background-color: $fff;
+        color: #2bbb93;
+    }
+}
+.default-btn.color-info {
+    @include ease3;
+    background-color: #50d1f8;
+    border: 1px solid #50d1f8;
+    &:hover {
+        background-color: $fff;
+        color: #50d1f8;
+    }
+}
+.default-btn.color-warning {
+    @include ease3;
+    background-color: #ffa04f;
+    border: 1px solid #ffa04f;
+    &:hover {
+        background-color: $fff;
+        color: #ffa04f;
+    }
+}
+.default-btn.color-danger {
+    @include ease3;
+    background-color: #fb2f2f;
+    border: 1px solid #fb2f2f;
+    &:hover {
+        background-color: $fff;
+        color: #fb2f2f;
+    }
+}
+.default-btn.color-dark {
+    @include ease3;
+    background-color: #1d2531;
+    border: 1px solid #1d2531;
+    &:hover {
+        background-color: $fff;
+        color: #1d2531;
+    }
+}
+.default-btn.color-light {
+    @include ease3;
+    color: $text-777;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    &:hover {
+        background-color: $fff;
+    }
+}
+
+/** Outline Buttons **/
+.outline-btn {
+    color: $fff;
+}
+.outline-btn.color-primary {
+    @include ease3;
+    background-color: $fff;
+    color: #5f6af5;
+    border: 1px solid #5f6af5;
+    &:hover {
+        color: $fff;
+        background-color: #5f6af5;
+    }
+}
+.outline-btn.color-secondary {
+  @include ease3;
+    background-color: $fff;
+    color: #ff4f7f;
+    border: 1px solid #ff4f7f;
+    &:hover {
+        color: $fff;
+        background-color: #ff4f7f;
+    }
+}
+.outline-btn.color-success {
+    @include ease3;
+    background-color: $fff;
+    color: #2bbb93;
+    border: 1px solid #2bbb93;
+    &:hover {
+        color: $fff;
+        background-color: #2bbb93;
+    }
+}
+.outline-btn.color-info {
+    @include ease3;
+    background-color: $fff;
+    color: #50d1f8;
+    border: 1px solid #50d1f8;
+    &:hover {
+        color: $fff;
+        background-color: #50d1f8;
+    }
+}
+.outline-btn.color-warning {
+    @include ease3;
+    background-color: $fff;
+    color: #ffa04f;
+    border: 1px solid #ffa04f;
+    &:hover {
+        color: $fff;
+        background-color: #ffa04f;
+    }
+}
+.outline-btn.color-danger {
+     @include ease3;
+    background-color: $fff;
+    color: #fb2f2f;
+    border: 1px solid #fb2f2f;
+    &:hover {
+        color: $fff;
+        background-color: #fb2f2f;
+    }
+}
+.outline-btn.color-dark {
+    @include ease3;
+    background-color: $fff;
+    color: #1d2531;
+    border: 1px solid #1d2531;
+    &:hover {
+        color: $fff;
+        background-color: #1d2531;
+    }
+}
+.outline-btn.color-light {
+    @include ease3;
+    background-color: $fff;
+    color: $text-777;
+    border: 1px solid #ccc;
+    &:hover {
+        color: $text-777;
+        background-color: #ccc;
+    }
+}
+/** Defoult ripple Buttons **/
+.ripple-default-btn {
+    color: $fff;
+    position: relative;
+    overflow: hidden;
+    .ripple {
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+        margin-left: -50px;
+        position: absolute;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.2);
+        animation: ripple 2s;
+        opacity: 0;
+    }
+    @keyframes ripple {
+        from {
+            opacity: 1;
+            transform: scale(0);
+        }
+    
+        to {
+            opacity: 0;
+            transform: scale(10);
+        }
+    }
+}
+.ripple-default-btn.color-primary {
+    @include ease3;
+    background-color: #5f6af5;
+    border: 1px solid #5f6af5;
+}
+.ripple-default-btn.color-secondary {
+    @include ease3;
+    background-color: #ff4f7f;
+    border: 1px solid #ff4f7f;
+}
+.ripple-default-btn.color-success {
+    @include ease3;
+    background-color: #2bbb93;
+    border: 1px solid #2bbb93;
+}
+.ripple-default-btn.color-info {
+    @include ease3;
+    background-color: #50d1f8;
+    border: 1px solid #50d1f8;
+}
+.ripple-default-btn.color-warning {
+    @include ease3;
+    background-color: #ffa04f;
+    border: 1px solid #ffa04f;
+}
+.ripple-default-btn.color-danger {
+    @include ease3;
+    background-color: #fb2f2f;
+    border: 1px solid #fb2f2f;
+}
+.ripple-default-btn.color-dark {
+    @include ease3;
+    background-color: #1d2531;
+    border: 1px solid #1d2531;
+}
+.ripple-default-btn.color-light {
+    @include ease3;
+    color: $text-777;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+}
+/** Ripple Buttons **/
+.ripple-btn {
+    color: $fff;
+    position: relative;
+    overflow: hidden;
+    .ripple {
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+        margin-left: -50px;
+        position: absolute;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.1);
+        animation: ripple 2s;
+        opacity: 0;
+    }
+    @keyframes ripple {
+        from {
+            opacity: 1;
+            transform: scale(0);
+        }
+    
+        to {
+            opacity: 0;
+            transform: scale(10);
+        }
+    }
+}
+.ripple-btn.color-primary {
+    @include ease3;
+    background-color: #5f6af5;
+    border: 1px solid #5f6af5;
+    &:hover {
+        background-color: $fff;
+        color: #5f6af5;
+    }
+}
+.ripple-btn.color-secondary {
+    @include ease3;
+    background-color: #ff4f7f;
+    border: 1px solid #ff4f7f;
+    &:hover {
+        background-color: $fff;
+        color: #ff4f7f;
+    }
+}
+.ripple-btn.color-success {
+    @include ease3;
+    background-color: #2bbb93;
+    border: 1px solid #2bbb93;
+    &:hover {
+        background-color: $fff;
+        color: #2bbb93;
+    }
+}
+.ripple-btn.color-info {
+    @include ease3;
+    background-color: #50d1f8;
+    border: 1px solid #50d1f8;
+    &:hover {
+        background-color: $fff;
+        color: #50d1f8;
+    }
+}
+.ripple-btn.color-warning {
+    @include ease3;
+    background-color: #ffa04f;
+    border: 1px solid #ffa04f;
+    &:hover {
+        background-color: $fff;
+        color: #ffa04f;
+    }
+}
+.ripple-btn.color-danger {
+    @include ease3;
+    background-color: #fb2f2f;
+    border: 1px solid #fb2f2f;
+    &:hover {
+        background-color: $fff;
+        color: #fb2f2f;
+    }
+}
+.ripple-btn.color-dark {
+    @include ease3;
+    background-color: #1d2531;
+    border: 1px solid #1d2531;
+    &:hover {
+        background-color: $fff;
+        color: #1d2531;
+    }
+}
+.ripple-btn.color-light {
+    @include ease3;
+    color: $text-777;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    &:hover {
+        background-color: $fff;
+    }
+}
+
+/** Defoult social Buttons **/
+.default-social-btn {
+    padding: 0 10px;
+    color: $fff;
+    i {
+        height: 100%;
+        margin-right: 10px;
+        padding-right: 10px;
+        display: flex;
+        align-items: center;
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+}
+.default-social-btn.color-facebook {
+    @include ease3;
+    background-color: #4565aa;
+    border: 1px solid #4565aa;
+
+    &:hover {
+        background-color: #5981d6;
+        border: 1px solid #5981d6;
+    }
+}
+.default-social-btn.color-twitter {
+    @include ease3;
+    background-color: #2e98e6;
+    border: 1px solid #2e98e6;
+    &:hover {
+        background-color: #3caaf9;
+    border: 1px solid #3caaf9;
+    }
+}
+.default-social-btn.color-linkedin {
+    @include ease3;
+    background-color: #1774ad;
+    border: 1px solid #1774ad;
+    &:hover {
+        background-color: #1d8cd1;
+    border: 1px solid #1d8cd1;
+    }
+}
+.default-social-btn.color-github {
+    @include ease3;
+    background-color: #24292f;
+    border: 1px solid #24292f;
+    &:hover {
+        background-color: #454e58;
+    border: 1px solid #454e58;
+    }
+}
+/** icon social Buttons **/
+.icon-social-btn {
+    padding: 0 10px;
+    color: $fff;
+    i {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+.icon-social-btn.color-facebook {
+    @include ease3;
+    background-color: #4565aa;
+    border: 1px solid #4565aa;
+    &:hover {
+        background-color: $fff;
+        color: #4565aa;
+    }
+}
+.icon-social-btn.color-twitter {
+    @include ease3;
+    background-color: #2e98e6;
+    border: 1px solid #2e98e6;
+    &:hover {
+        background-color: $fff;
+        color: #2e98e6;
+    }
+}
+.icon-social-btn.color-linkedin {
+    @include ease3;
+    background-color: #1774ad;
+    border: 1px solid #1774ad;
+    &:hover {
+        background-color: $fff;
+        color: #1774ad;
+    }
+}
+.icon-social-btn.color-github {
+    @include ease3;
+    background-color: #33383f;
+    border: 1px solid #33383f;
+    &:hover {
+        background-color: $fff;
+        color: #33383f;
+    }
+}

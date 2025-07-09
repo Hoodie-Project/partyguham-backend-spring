@@ -1,0 +1,55 @@
+/** Breadcrumb style **/
+.gi-breadcrumb {
+	padding: 40px 0;
+	background-color: #efefef;
+	.gi-breadcrumb-title {
+		text-decoration: $textdecoration;
+		color: $main-text-color;
+		display: block;
+		font-size: 32px;
+		font-family: $fontfamilyfjallaone;
+		line-height: 1.2;
+		font-weight: $font-weight-600;
+		margin: 0 auto 17px;
+		letter-spacing: 2.5px;
+		text-transform: $capitalize;
+	}
+}
+.gi-breadcrumb-list {
+	li {
+		display: inline-block;
+		font-size: 18px;
+		font-weight: $font-weight-700;
+		letter-spacing: 1px;
+		line-height: 1.2;
+		text-transform: $capitalize;
+		a {
+			position: $relative;
+			color: $main-text-color;
+		}
+	}
+	li.active {
+		color: $main-primary-color;
+	}
+	.gi-breadcrumb-item.active {
+		&::before {
+			color: $main-primary-color;
+		}
+	}
+}
+.gi-breadcrumb-item {
+	display: flex;
+	+ {
+		.gi-breadcrumb-item {
+			padding-left: 7px;
+			&::before {
+				display: inline-block;
+				padding-right: 7px;
+				color: $main-text-color;
+				content: "\f101";
+				font-family: $EcIcons;
+				font-size: $fontsize-18px;
+			}
+		}
+	}
+}

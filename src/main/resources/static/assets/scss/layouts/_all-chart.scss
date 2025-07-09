@@ -1,0 +1,134 @@
+/** All Chart **/
+.mini-chart {
+    svg {
+        overflow: inherit;
+    }
+}
+
+.apexcharts-xaxis text,
+.apexcharts-yaxis text {
+    fill: $text-999;
+}
+
+.apexcharts-legend-text {
+    color: $text-999 !important;
+}
+
+.gi-card-content {
+    .gi-chart-header {
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        border-radius: $radius;
+        .block {
+            padding: 10px;
+            text-align: center;
+            h6 {
+                color: $text-777;
+                font-size: 14px;
+            }
+            h5 {
+                margin: 0;
+                color: $sb-title-color;
+                font-weight: 600;
+                font-size: 15px;
+                span {
+                    font-size: 11px;
+                    font-weight: 400;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 19px;
+                }
+                i {
+                    font-size: 14px;
+                }
+                .up {
+                    color: $up;
+                }
+                .down {
+                    color: $down;
+                }
+            }
+        }
+    }
+    .gi-chart-header-2 {
+        padding: 15px;
+        border: 1px solid $border-eee;
+        border-radius: $radius;
+        .block {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+            h6 {
+                margin: 0;
+                color: $text-777;
+                font-size: 14px;
+            }
+            h5 {
+                margin: 0;
+                color: $sb-title-color;
+                font-weight: 600;
+                font-size: 17px;
+                span {
+                    margin-right: 10px;
+                }
+                i {
+                    margin-right: 5px;
+                    font-size: 16px;
+                }
+            }
+            .up {
+                color: $up;
+            }
+            .down {
+                color: $down;
+            }
+            .list {
+                margin: 0;
+                font-size: 11px;
+                font-weight: 400;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                line-height: 19px;
+                .dropdown {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}
+
+#overviewChart {
+    margin-bottom: -24px;
+}
+#campaignsChart {
+    margin-bottom: -24px;
+}
+.jvectormap-container {
+    display: flex;
+    justify-content: center;
+}
+
+#campaignsChart {
+    .apexcharts-legend {
+        // display: none !important;
+    }
+}
+
+/* Responsive css sidebar */
+@media only screen and (max-width: 768px) {
+    .gi-card-content {
+        .gi-chart-header {
+            flex-wrap: wrap;
+            .block {
+                width: 50%;
+            }
+        }
+    }
+}

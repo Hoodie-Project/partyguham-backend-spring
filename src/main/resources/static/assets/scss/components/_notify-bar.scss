@@ -1,0 +1,308 @@
+/** Notify bar css **/
+.gi-notify-bar-overlay {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 42;
+	display: none;
+}
+.gi-notify-bar-open {
+	transform: translateX(0px) !important;
+}
+.gi-notify-bar {
+	@include ease3;
+	width: 400px;
+	height: 100vh;
+	background-color: $fff;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 43;
+	transform: translateX(+400px);
+	.gi-bar-title {
+		padding: 15px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		.close-notify {
+			color: $main-secondary-color;
+			font-size: 17px;
+			&:hover {
+				opacity: .8;
+			}
+		}
+		h6 {
+			margin: 0;
+			font-size: 17px;
+			font-weight: 700;
+			color: $title-color;
+		}
+		.label {
+			margin-left: 15px;
+			padding: 5px;
+			font-size: 11px;
+			font-weight: 500;
+			color: $fff;
+			background-color: $main-primary-color;
+			border-radius: $radius;
+		}
+	}
+	.gi-bar-content {
+		.tab-content {
+			@include scrollbar;
+			height: calc(100vh - 110px);
+			overflow: auto;
+		}
+		.nav.nav-tabs {
+			padding: 15px 15px 0 15px;
+			background-color: $hover-drop-list;
+			.nav-link {
+				color: $title-color;
+			}
+		}
+		.activity-list {
+			padding: 24px;
+		}
+		.download-files {
+			margin-top: 5px;
+			display: flex;
+			flex-wrap: wrap;
+			.download {
+				width: 70px;
+				height: 70px;
+				padding: 5px;
+				margin: 10px 10px 0 0;
+				border-radius: $radius;
+				overflow: hidden;
+				border: 1px solid $border-eee;
+				position: relative;
+				&:hover {
+					a {
+						opacity: 1;
+					}
+				}
+				.file {
+					width: 100%;
+					height: 100%;
+					border-radius: $radius;
+					background-color: $hover-drop-list;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					i {
+						font-size: 25px;
+					}
+				}
+				img {
+					width: 100%;
+					border-radius: $radius;
+				}
+				a {
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background-color: rgba(0, 0, 0, .5);
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					color: $fff;
+					font-size: 22px;
+					opacity: 0;
+				}
+			}
+		}
+	}
+}
+
+.gi-alert-list {
+	ul {
+		.check {
+			display: flex;
+			justify-content: center;
+			color: $main-primary-color;
+		}
+		li {
+			padding: 24px;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			position: relative;
+			border-bottom: 1px solid $border-eee;
+			.icon {
+				width: 35px;
+				height: 35px;
+				margin-right: 15px;
+				font-size: 20px;
+				border-radius: $radius;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.icon.gi-warn {
+				background-color: rgba(251, 47, 47, 0.2);
+				color: #fb2f2f;
+			}
+			.icon.gi-alert {
+				background-color: rgba(255, 161, 79, 0.2);
+				color: #ffa04f;
+			}
+			.icon.gi-success {
+				background-color: rgba(43, 187, 146, 0.2);
+				color: #2bbb93;
+			}
+			.detail {
+				width: calc(100% - 50px);
+			}
+			.title {
+				margin: 0;
+				font-size: 14px;
+				font-weight: 500;
+				color: $title-color;
+			}
+			.time {
+				margin: 0;
+				font-size: 12px;
+				font-weight: 300;
+				color: $text-999;
+			}
+			.message {
+				margin: 0;
+				font-size: 13px;
+				line-height: 24px;
+			}
+		}
+	}
+}
+.gi-message-list {
+	ul {
+		position: relative;
+		.check {
+			display: flex;
+			justify-content: center;
+			color: $main-primary-color;
+		}
+		li {
+			padding: 24px;
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
+			border-bottom: 1px solid $border-eee;
+			&:hover {
+				.reply {
+					opacity: 1;
+				}
+			}
+			.reply {
+				padding: 2px 5px;
+				border-radius: $radius;
+				position: absolute;
+				top: 15px;
+				right: 15px;
+				color: $title-color;
+				background-color: $hover-drop-list;
+				font-size: 12px;
+				z-index: 15;
+				opacity: 0;
+			}
+			.user {
+				margin-right: 15px;
+				display: flex;
+				position: relative;
+				img {
+					width: 40px;
+					height: 40px;
+					border-radius: $radius;
+				}
+				.label {
+					width: 10px;
+					height: 10px;
+					position: absolute;
+					top: 2px;
+    				right: 2px;
+					border-radius: 50%;
+					display: block;
+					border: 1px solid $fff;
+				}
+				.label.online {
+					background-color: $up;
+				}
+				.label.offline {
+					background-color: $icon-clr;
+				}
+				.label.busy {
+					background-color: $main-primary-color;
+				}
+			}
+			.detail {
+				width: calc(100% - 65px);
+				.name {
+					margin: 0;
+					font-size: 14px;
+					font-weight: 500;
+					color: $title-color;
+				}
+				.time {
+					margin: 0;
+					font-size: 12px;
+					font-weight: 300;
+					color: $text-999;
+				}
+				.message {
+					margin: 0;
+					font-size: 13px;
+					line-height: 24px;
+				}
+			}
+		}
+	}
+}
+.gi-activity-list {
+	ul {
+		.check {
+			display: flex;
+			justify-content: center;
+			color: $main-primary-color;
+		}
+		li {
+			&:not(:last-child) {
+				margin-bottom: 50px !important;
+			}
+			.detail {
+				line-height: 24px;
+			}
+		}
+	}
+}
+
+
+/**  Responsive notification  **/
+@media only screen and (max-width: 767px) {
+	.gi-notify-bar {
+		width: 300px;
+		.gi-bar-content {
+			.download-files {
+				.download {
+					width: 50px;
+					height: 50px;
+				}
+			}
+		}
+	}
+	.gi-message-list {
+		ul {
+			li {
+				.user {
+					img {
+						width: 35px;
+						height: 35px;
+					}
+				}
+			}
+		}
+	}
+}

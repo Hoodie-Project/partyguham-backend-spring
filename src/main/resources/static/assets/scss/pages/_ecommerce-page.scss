@@ -1,0 +1,295 @@
+/**  eCommerce page  **/
+.ecom {
+    .card-groth {
+        margin-bottom: -10px;
+    }
+
+}
+
+.special {
+    position: relative;
+
+    &:after {
+        content: "";
+        width: 150px;
+        height: 150px;
+        background-color: rgba(255, 255, 255, .3);
+        position: absolute;
+        top: -60px;
+        right: -60px;
+        border-radius: 50%;
+    }
+    .title {
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .card-icon {
+        position: absolute;
+        right: 15px;
+        top: 5px;
+        opacity: .5;
+
+        i {
+            font-size: 40px;
+        }
+    }
+}
+.gi-card.special {
+    overflow: hidden;
+}
+.special.primary {
+    background: $main-primary-color;
+}
+
+.special.secondary {
+    background: $main-secondary-color;
+}
+
+.special.third {
+    background: $up;
+}
+
+.special.primary,
+.special.secondary,
+.special.third {
+
+    h4,
+    h5 {
+        color: $fff !important;
+    }
+
+    p,
+    a,
+    span {
+        color: $fff !important;
+    }
+}
+
+/**  Category page  **/
+.gi-category {
+    h3 {
+        font-size: 17px;
+        font-weight: 600;
+        color: $title-color;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .gi-cat-list {
+        table {
+            tbody {
+                tr {
+                    td {
+                        .gi-sub-cat-count {
+                            margin: 2px 0 2px 5px;
+                            background-color: $main-primary-color;
+                            padding: 2px 7px;
+                            color: $fff;
+                            border-radius: $radius;
+                            display: inline-block;
+                            flex-direction: row;
+                        }
+
+                        .gi-sub-cat-tag {
+                            margin: 3px 0 3px 5px;
+                            background-color: $body-bg-dark;
+                            color: $sb-title-color;
+                            padding: 2px 7px;
+                            border-radius: $radius;
+                            text-transform: capitalize;
+                            display: inline-block;
+                            flex-direction: row;
+                            font-size: 12px;
+                            letter-spacing: 0.02rem;
+                        }
+
+                        .badge-success {
+                            background-color: $main-third-color;
+                        }
+                    }
+
+                    td.active {
+                        color: $main-third-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**  Add product page  **/
+.gi-product-uploads {
+    .gi-vendor-img-upload {
+        margin-bottom: -10px;
+        position: sticky;
+        top: 94px;
+    }
+
+    .avatar-upload {
+        margin-bottom: 10px;
+        position: relative;
+
+        .avatar-edit {
+            position: absolute;
+            right: 25px;
+            z-index: 1;
+            top: 25px;
+
+            input {
+                width: 40px;
+                height: 40px;
+                padding: 0;
+                border-radius: $radius;
+                position: absolute;
+                opacity: 0;
+                z-index: 1;
+            }
+
+            input+label {
+                @include ease3;
+                width: 40px;
+                height: 40px;
+                padding: 10px;
+                margin-bottom: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: $radius;
+                background: $fff;
+                border: 1px solid $border-eee;
+                cursor: pointer;
+                font-weight: normal;
+
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .avatar-preview {
+            width: 100%;
+            height: 100%;
+            padding: 15px;
+            position: relative;
+            border: 1px solid $border-eee;
+            border-radius: $radius;
+
+            >div {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .imagePreview {
+                img {
+                    margin: auto;
+                    vertical-align: middle;
+                    max-width: 100%;
+                    border-radius: $radius;
+                }
+            }
+        }
+    }
+
+    .gi-vendor-main-img {
+        .thumb-upload-set {
+            display: inline-flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .thumb-upload {
+                margin: 2px 7px 10px 7px;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                display: inline-block;
+
+                .thumb-edit {
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    z-index: 1;
+                    cursor: pointer;
+
+                    input {
+                        opacity: 0;
+                        width: 30px;
+                        height: 30px;
+                        padding: 0;
+                        border-radius: 50%;
+                        position: absolute;
+                        z-index: 1;
+                        cursor: pointer;
+                    }
+
+                    input+label {
+                        @include ease3;
+                        width: 30px;
+                        height: 30px;
+                        margin-bottom: 0;
+                        padding: 4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: $radius;
+                        background: $fff;
+                        border: 1px solid $border-eee;
+                        cursor: pointer;
+                        font-weight: normal;
+                        cursor: pointer;
+
+                        i {
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                .thumb-preview {
+                    padding: 2px;
+                    position: relative;
+                    border: 1px solid $border-eee;
+                    border-radius: $radius;
+
+                    >div {
+                        width: 80px;
+                        height: 80px;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        vertical-align: middle;
+                        max-width: 100%;
+                        border-radius: $radius;
+                    }
+                }
+            }
+        }
+    }
+
+    input[type=color] {
+        width: 25px !important;
+        height: 25px !important;
+        padding: 0;
+        border-radius: $radius !important;
+        display: inline-flex;
+        margin: 4px;
+        min-height: 25px;
+        border: 0;
+    }
+
+    .color-label {
+        width: 100%;
+    }
+}

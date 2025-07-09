@@ -1,0 +1,49 @@
+@mixin ease1 {
+  transition: all .1s ease-in-out;
+} 
+@mixin ease2 {
+  transition: all .2s ease-in-out;
+} 
+@mixin ease3 {
+  transition: all 0.3s ease-in-out;
+}
+@mixin ease4 {
+  transition: all 0.4s ease-in-out;
+}
+@mixin ease05 {
+  transition: all .05s ease-in-out;
+} 
+@mixin lightscrollbar {
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(80, 93, 113, .5);
+    border-radius: 5px;
+  }
+}
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(80, 93, 113, .5);
+    border-radius: 5px;
+  }
+}
+@mixin hoverscrollbar {
+  &::-webkit-scrollbar {
+    position: absolute;
+    width: 7px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(80, 93, 113, .5);
+    border-radius: 5px;
+  }
+}

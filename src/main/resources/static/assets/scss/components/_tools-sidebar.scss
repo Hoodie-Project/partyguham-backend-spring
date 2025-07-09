@@ -1,0 +1,138 @@
+/* ======================================
+Tools sidebar
+========================================= */
+
+.gi-tools-sidebar-overlay {
+	display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 41;
+}
+.gi-tools-sidebar {
+	width: 300px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #ffffff;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 41;
+	transform: translateX(300px);
+	.gi-tools-sidebar-toggle {
+		position: absolute;
+		top: 45%;
+		right: 302px;
+		width: 40px;
+		height: 40px;
+		background-color: rgba(29, 37, 49, .6);
+		transition: all ease-in 0.3s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 25px;
+		z-index: -1;
+		text-decoration: none;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		border-radius: $radius;
+		i {
+			color: #fff;
+			animation: rotation 3s infinite linear;
+		}
+		@keyframes rotation {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(359deg);
+			}
+		}
+	}
+	.gi-bar-title {
+		margin-bottom: 15px;
+		padding: 15px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid $border-eee;
+		h6 {
+			margin: 0;
+			font-size: 17px;
+			font-weight: 700;
+			color: $title-color;
+		}
+		.close-tools {
+			color: #ff4f7f;
+			font-size: 17px;
+		}
+	}
+	.gi-tools-detail {		
+		@include scrollbar;
+		height: calc(100vh - 72px);
+		padding: 0 15px 15px 15px;
+		overflow: auto;
+		.gi-tools-block {
+			h3 {
+				margin: 15px 0;
+				font-size: 14px;
+				font-weight: 500;
+				color: $title-color;
+				font-family: $font-family-text;
+			}
+			p {
+				margin: 0;
+				text-transform: capitalize;
+			}
+			.gi-tools-info {
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row;
+				justify-content: space-between;
+				.gi-tools-item {
+					width: 125px;
+					margin-bottom: 10px;
+					text-align: center;
+					img {
+						width: 100%;
+						padding: 5px;
+						border-radius: 10px;
+						border: 1px solid $border-eee;
+						&:hover {
+							border: 1px solid $main-primary-color;
+						}
+					}
+				}
+				.gi-tools-item.active {
+					position: relative;
+					&:after {
+						content: "\eb79";
+						width: 30px;
+						height: 30px;
+						font-size: 16px;
+						font-family: remixicon !important;
+						position: absolute;
+						top: 10px;
+						right: 10px;
+						border-radius: 10px;
+						background-color: rgba(95, 106, 245, .7);
+						color: $color-white;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+					img {
+						border-color: $main-primary-color;
+					}
+				}
+			}
+		}
+	}
+}
+.open-tools {
+	transform: translateX(0);
+}

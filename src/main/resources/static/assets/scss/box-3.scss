@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/**--------------
+    Box design mode
+--------------**/
+body[data-gi-mode="dark"]{
+    .gi-card {
+        border: 1px solid #313a4b;
+        box-shadow: none;
+    }
+}
+body[data-gi-mode="light"]{
+    .gi-card {
+        border: 1px solid #eee;
+        box-shadow: none;
+    }
+}

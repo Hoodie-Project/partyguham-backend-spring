@@ -1,0 +1,739 @@
+/** All Cards **/
+.gi-full-card-close {
+    display: none;
+}
+
+.gi-card-overlay {
+    @include ease3;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 42;
+}
+
+.gi-full-screen {
+    width: 100%;
+    max-width: 1400px;
+    padding: 12px;
+    position: fixed;
+    z-index: 30;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 43;
+    .gi-card {
+        margin: 0;
+    }
+}
+
+.gi-simplebar {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.gi-card {
+    height: calc(100% - 24px);
+    margin-bottom: 24px;
+    background-color: $fff;
+    border-radius: $radius;
+    box-shadow: $card-shadow;
+
+    .gi-card-header.tips {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        h4 {
+            margin: 0 10px 0 0;
+        }
+
+        p.small {
+            margin: 0;
+            font-size: 12px;
+            color: $text-999;
+        }
+    }
+
+    .gi-card-header {
+        padding: 24px;
+        border-bottom: 1px solid $border-eee;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .gi-card-title {
+            margin: 0;
+            font-size: 16px;
+            color: $title-color;
+            font-weight: 700;
+            text-transform: capitalize;
+            display: flex;
+            align-items: center;
+            cursor: default;
+            user-select: none;
+        }
+
+        .header-tools {
+            height: 30px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            >a {
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $text-777;
+                border: 1px solid $border-eee;
+                border-radius: $radius;
+
+                i {
+                    color: $text-777;
+                }
+
+            }
+
+            .button-add {
+                width: auto;
+                padding: 0 10px;
+                background-color: $up;
+                color: #fff;
+                @include ease3;
+
+                i {
+                    color: #fff;
+                }
+
+                &:hover {
+                    background-color: $up-dark;
+                }
+            }
+
+            .gi-full-card-close {
+                i {
+                    color: #fd6969 !important;
+                    font-size: 20px;
+                }
+            }
+
+            .dots {
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $text-777;
+                border: 1px solid $border-eee;
+                border-radius: $radius;
+                cursor: pointer;
+            }
+
+            .link {
+                color: $main-primary-color;
+                font-size: 13px;
+            }
+
+            .date {
+                @include ease3;
+                color: $text-777;
+                font-size: 13px;
+                padding: 0 10px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                border-radius: $radius;
+                cursor: pointer;
+                user-select: none;
+                border: 1px solid $border-eee;
+
+                &:hover {
+                    background-color: $bg-transparent;
+                }
+            }
+        }
+    }
+
+    .gi-card-content {
+        padding: 24px;
+
+        .note {
+            margin: 15px 0 0 0;
+            padding: 10px 15px;
+            background-color: $bg-transparent;
+            border-radius: $radius;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .label-card {
+        .title {
+            display: flex;
+            justify-content: space-between;
+
+            .icon {
+                width: 50px;
+                height: 50px;
+                padding: 5px;
+                background-color: rgba(72, 85, 104, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: $radius;
+
+                i {
+                    font-size: 25px;
+                    color: $sb-title-color;
+                }
+            }
+
+            h4 {
+                margin-bottom: 12px;
+                color: $text-777;
+                font-size: 15px;
+                font-family: $font-family-text;
+                font-weight: 500;
+                text-align: right;
+            }
+
+            .growth-numbers {
+                h5 {
+                    margin: 0;
+                    color: $sb-title-color;
+                    font-size: 22px;
+                    line-height: 20px;
+                    font-weight: 700;
+                    text-align: right;
+                }
+            }
+        }
+        .card-groth {
+            margin-top: 10px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            i {
+                margin-right: 5px;
+                font-size: 15px;
+            }
+
+            span {
+                margin-left: 5px;
+                color: $text-999;
+            }
+        }
+        .up {
+            color: $up;
+        }
+
+        .down {
+            color: $down;
+        }
+    }
+
+    .gi-card-footer {
+        padding: 15px;
+    }
+}
+
+.card-body-header {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h6 {
+        margin: 15px 0 !important;
+        font-size: 16px;
+        color: $title-color;
+        font-weight: 700;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        cursor: default;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    input {
+        padding: 8px 15px;
+        border: 1px solid $border-eee;
+        border-radius: $radius;
+        font-size: 13px;
+        color: $text-777;
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}
+
+/* Card header datepicker */
+.daterangepicker.opensleft {
+
+    &:before,
+    &:after {
+        display: none !important;
+        border: 0;
+    }
+}
+
+.daterangepicker {
+    margin-top: 2px;
+    padding: 10px;
+    border: 0;
+    box-shadow: 0 2px 7px rgba(58, 65, 74, 0.25);
+
+    &:before,
+    &:after {
+        display: none !important;
+        border: 0;
+    }
+    li {
+        border-radius: $radius;
+
+        &:hover {
+            background-color: #e9ecef !important;
+        }
+    }
+
+    li.active {
+        &:hover {
+            background-color: $main-primary-color !important;
+        }
+    }
+
+    .ranges {
+        li {
+            color: $text-777;
+        }
+
+        li.active {
+            background-color: $main-primary-color;
+            color: #fff;
+        }
+    }
+
+    td.active {
+        background-color: $main-primary-color;
+
+        &:hover {
+            background-color: $main-primary-color;
+        }
+    }
+
+    .drp-buttons {
+        .btn-primary {
+            background-color: $main-primary-color;
+        }
+    }
+
+    .calendar-table {
+        table {
+            font-family: $font-family-text;
+
+            thead {
+                tr {
+                    th {
+                        background-color: #fff;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Map card */
+.gi-map-view {
+    #world-map {
+        height: 217px;
+    }
+}
+.analytics-map {
+    #world-map {
+        height: 239px;
+    }
+}
+.ecom-map {
+    #world-map {
+        height: 237px !important;
+    }
+}
+.vendor-map {
+    #world-map {
+        height: 214px !important;
+    }
+}
+
+.jvectormap-zoomin,
+.jvectormap-zoomout {
+    padding: 3px;
+    position: absolute;
+    right: 0;
+    left: auto;
+    border-radius: $radius;
+    color: $text-777;
+    cursor: pointer;
+    line-height: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.world-map {
+    height: 230px;
+}
+
+.gi-map-detail {
+    .title {
+        margin: 15px 0;
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $border-eee;
+
+        h5 {
+            margin-bottom: 0;
+            font-size: 15px;
+            color: $title-color;
+            font-weight: 600;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+
+            i {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .gi-detail-list {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        .gi-label {
+            display: flex;
+            justify-content: space-between;
+            color: $text-777;
+            font-weight: 300;
+
+            p {
+                margin-bottom: 5px;
+                color: $text-777;
+                font-weight: 600;
+            }
+        }
+
+        label {
+            font-size: 13px;
+        }
+
+        .up,
+        .down {
+            font-size: 11px;
+        }
+
+        .down {
+            color: #f90c4c;
+        }
+
+        .up {
+            color: #2bbb93;
+        }
+
+        &:hover {
+            .progress {
+                opacity: .5;
+            }
+        }
+    }
+
+    .progress {
+        @include ease3;
+        height: 5px;
+    }
+}
+
+/* Activity card */
+.activity-max-height {
+    height: 492px;
+}
+
+.activity-list {
+    ul {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        cursor: default;
+
+        li {
+            padding-left: 15px;
+
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+
+            &:before {
+                content: "";
+                width: 1px;
+                height: 100%;
+                border-left: 2px dashed $border-eee;
+                position: absolute;
+                top: 0;
+                left: -5px;
+            }
+
+            .title {
+                margin: 15px 0 5px 0;
+                font-size: 14px;
+                color: $title-color;
+                font-weight: 500;
+            }
+
+            .detail {
+                margin-bottom: 0;
+                font-size: 13px;
+                color: $text-777;
+                font-weight: 300;
+            }
+
+            .date-time.warn {
+                color: $main-secondary-color;
+            }
+
+            .date-time {
+                padding: 5px 10px;
+                background-color: $bg-transparent;
+                color: $main-primary-color;
+                border-radius: $radius;
+                font-size: 15px;
+                font-weight: 500;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    width: 21px;
+                    height: 2px;
+                    border-top: 2px dashed $border-eee;
+                    position: absolute;
+                    top: 50%;
+                    left: -20px;
+                    transform: translatey(-50%);
+                }
+
+                .time {
+                    margin-left: 30px;
+                    font-size: 11px;
+                    color: $text-777;
+                    font-weight: 400;
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        width: 1px;
+                        height: 15px;
+                        background-color: #ccc;
+                        position: absolute;
+                        top: 0;
+                        left: -15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Todo card */
+.todo-max-height {
+    height: 510px;
+}
+.project-max-height {
+    height: 645px;
+    .simplebar-offset {
+        margin: 0;
+    }
+}
+
+.todo-list {
+    .form-group {
+        display: block;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px dashed $border-eee;
+        }
+
+        span {
+            padding-left: 25px;
+            font-size: 13px;
+            color: $text-777;
+        }
+
+        label {
+            margin: 0;
+            position: relative;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 14px;
+            line-height: 22px;
+            color: $text-777;
+
+            &:before {
+                content: '';
+                width: 15px;
+                height: 15px;
+                margin: 0 10px 0 0;
+                background-color: $bg-transparent;
+                border: 0;
+                box-shadow: none;
+                border-radius: 50%;
+                display: inline-block;
+                position: relative;
+                vertical-align: middle;
+                cursor: pointer;
+                border: 1px solid $border-ddd;
+                position: absolute;
+                top: 3px;
+                left: 0;
+            }
+
+            span {
+                width: calc(100% - 28px);
+                padding-right: 15px;
+                display: block;
+            }
+            .date-time {
+                font-size: 11px;
+                font-weight: 300;
+                color: $text-999;
+            }
+        }
+
+        input {
+            padding: 0;
+            height: initial;
+            width: initial;
+            margin-bottom: 0;
+            display: none;
+            cursor: pointer;
+
+            &:checked+label:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 3px;
+                left: 0px;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                border: 1px solid $main-primary-color;
+            }
+        }
+    }
+}
+
+/* Responsive css */
+@media only screen and (max-width: 991px) {
+    .gi-full-screen {
+        .gi-card {
+            height: calc(100vh - 24px);
+            overflow: auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .gi-card {
+        .gi-card-header {
+            padding: 15px;
+        }
+        .gi-card-content {
+            padding: 15px;
+        }
+    }
+
+    .gi-simplebar {
+        padding-top: 5px !important;
+    }
+
+    .daterangepicker.ltr {
+        .drp-calendar {
+            float: none;
+        }
+    }
+
+    .daterangepicker {
+        margin: 15px;
+
+        .ranges {
+            width: 100%;
+            margin-bottom: 15px;
+
+            ul {
+                text-align: center;
+            }
+        }
+
+        .drp-calendar.left,
+        .drp-calendar.right {
+            width: 100%;
+            margin: auto !important;
+            border: 0;
+        }
+    }
+
+    .daterangepicker.show-ranges {
+        .drp-calendar.left {
+            border: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .header-575 {
+        flex-direction: column !important;
+
+        .header-tools {
+            margin-top: 15px;
+            justify-content: flex-start !important;
+        }
+    }
+    .gi-card {
+        .gi-card-header {
+            .header-tools {
+                .date {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+    .gi-full-card {
+        display: none !important;
+    }
+}

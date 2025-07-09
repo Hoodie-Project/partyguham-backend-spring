@@ -1,0 +1,82 @@
+/** General alert popup **/
+.alert-popup {
+    ul{
+        li{
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid $border-eee;
+            border-radius: $radius;
+            display: flex;
+            align-items: center;
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+            &:hover {
+                background-color: $body-bg;
+            }
+        }
+    }
+}
+.swal2-popup {
+    padding: 30px;
+    border-bottom: 5px solid $main-primary-color;
+    .swal2-icon {
+        margin: 0 auto 30px auto;
+    }
+    .swal2-title {
+        padding: 0;
+        font-size: 22px;
+        color: $title-color;
+    }
+    .btn {
+        @include ease3;
+        margin: 5px;
+        &:hover {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+        }
+    }
+    .swal2-confirm {
+        background-color: $main-primary-color;
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    .btn-danger {
+        background-color: $main-secondary-color;
+    }
+    .swal2-success-ring {
+        border-color: #2bbb93 !important;
+    }
+    .swal2-success {
+        color: #2bbb93 !important;
+    }
+    div:where(.swal2-icon).swal2-success [class^=swal2-success-line] {
+        background-color: #2bbb93 !important;
+    }
+}
+.swal2-icon-success {
+    border-bottom: 5px solid #2bbb93;
+}
+.swal2-icon-question {
+    border-bottom: 5px solid #ff4f7f;
+    div:where(.swal2-icon).swal2-question {
+        border-color: #ff4f7f;
+    }
+    div:where(.swal2-icon).swal2-question {
+        color: #ff4f7f;
+    }
+}
+.swal2-icon-error {
+    border-bottom: 5px solid #fb2f2f;
+    div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=left], div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=right] {
+        background-color: #fb2f2f;
+    }
+    div:where(.swal2-icon).swal2-error {
+        border-color: #fb2f2f;
+    }
+}
+.swal2-icon-info {
+    border-bottom: 5px solid #50d1f8;
+}

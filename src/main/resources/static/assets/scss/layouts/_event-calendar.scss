@@ -1,0 +1,337 @@
+/* Header Calendar */
+
+/* Event Calendar */
+.gi-date-range {
+    a {
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 16px;
+        color: $text-777;
+        i{
+            font-size: 16px;
+            line-height: 16px;
+        }
+    }
+}
+.calendar {
+    position: relative;
+    overflow: hidden;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 14px;
+    color: #545A5C;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    header {
+        .simple-calendar-btn {
+            display: inline-block;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            color: $text-999;
+            border-radius: $radius;
+            border: 1px solid $border-eee;
+
+            &:hover {
+                background: $border-ddd;
+                color: white;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 9px;
+                left: 8px;
+                width: 9px;
+                height: 9px;
+                border-style: solid;
+                border-width: 2px 2px 0 0;
+                transform: rotate(45deg);
+                transform-origin: center center;
+            }
+        }
+
+        .btn-prev {
+            top: 0;
+            left: 0;
+            transform: rotate(-180deg);
+        }
+
+        .btn-next {
+            top: 0;
+            right: 0;
+
+            &:before {
+                transform: rotate(45deg);
+            }
+        }
+
+        .month {
+            height: 30px;
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+            color: $title-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .year {
+                margin: 0 0 0 5px;
+                font-size: 12px;
+                font-weight: 100;
+                color: $text-999;
+            }
+        }
+    }
+
+    table {
+        width: 100%;
+        margin: 20px 0 0 0;
+        border-spacing: 0;
+        border-collapse: separate;
+        border: 1px solid $border-eee;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    thead {
+        font-size: 1.2em;
+        font-weight: 600;
+
+        td {
+            padding-top: 15px;
+        }
+    }
+
+    td {
+        padding: .1em;
+        font-size: 14px;
+    }
+
+    tbody {
+        tr {
+            td {
+                color: $text-777;
+            }
+        }
+    }
+
+    .day {
+        width: 35px;
+        height: 35px;
+        position: relative;
+        display: inline-block;
+        line-height: 2.5em;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        cursor: pointer;
+
+        &:hover {
+            border: 2px solid $main-secondary-color;
+        }
+
+        &.today {
+            background-color: rgba(101, 108, 241, .17);
+            color: $fff;
+            color: $main-primary-color;
+            &.has-event {
+                &:after {
+                    background: $fff;
+                }
+            }
+        }
+
+        &.wrong-month {
+            color: #CBD1D2;
+
+            &:hover {
+                border: 2px solid transparent;
+            }
+        }
+
+        &.has-event {
+            &:after {
+                content: '';
+                position: absolute;
+                top: calc(50% + .6em);
+                left: calc(50% - 2px);
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background: $main-secondary-color;
+            }
+        }
+
+        &.disabled {
+            cursor: default;
+
+            &:hover {
+                border: 2px solid transparent;
+            }
+        }
+    }
+
+    .event-container {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        background: rgba(255, 255, 255, .8);
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 1px solid $border-eee;
+        backdrop-filter: blur(2px);
+        .event-wrapper {
+            @include scrollbar;
+            overflow-y: auto;
+            max-height: 100%;
+        }
+
+        .close {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            z-index: 5;
+            &:before {
+                transform: rotate(45deg);
+                background-color: $text-777;
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+                background-color: $text-777;
+            }
+        }
+
+        .event {
+            position: relative;
+            width: 100%;
+            padding: 15px 0;
+            text-align: left;
+            color: $text-777;
+            border-bottom: 1px solid $border-eee;
+        }
+
+        .event-date {
+            margin-bottom: 1em;
+            color: $text-999;
+            font-size: 12px;
+        }
+
+        .event-hour {
+            float: right;
+            color: $text-999;
+            font-size: 12px;
+        }
+
+        .event-summary {
+            font-weight: 400;
+            font-size: 14px;
+        }
+    }
+
+    .filler {
+        position: absolute;
+        width: 0;
+        height: 0;
+        background: rgba(255, 255, 255, .7);
+        border: 1px solid $border-eee;
+        transform: translate(-50%, -50%);
+        backdrop-filter: blur(2px);
+    }
+    .event-container {
+        @include scrollbar;
+        .close{
+            &:before, &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background-color: $text-777;
+            }
+        }
+    }
+}
+.calendar-container {
+    .calendar {
+        table {
+            padding: 0 10px 15px 10px;
+        }
+    }
+}
+.gi-event-list {
+    ul {
+        margin: 24px 0 0 0;
+        padding: 0;
+
+        li {
+            display: flex;
+            flex-direction: row;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+        .date {
+            width: 55px;
+            margin-right: 15px;
+            padding: 5px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(101, 108, 241, .17);
+            border-radius: $radius;
+            font-size: 14px;
+            font-weight: 600;
+            color: $main-primary-color;
+
+            .day {
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+
+        .date.active {
+            background-color: rgba(251, 101, 144, .20);
+            color: $main-secondary-color;
+
+            .day {
+                color: $main-secondary-color;
+            }
+        }
+
+        p {
+            width: calc(100% - 55px);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: $text-777;
+
+            .time {
+                color: $text-999;
+            }
+        }
+    }
+}

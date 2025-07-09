@@ -1,0 +1,152 @@
+/** Common Accordiions **/
+.accordion {
+    > div {
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+    .accordion-item {
+        border: 0;
+        &:first-of-type {
+            .accordion-button {
+                border-top-left-radius: $radius;
+                border-top-right-radius: $radius;
+            }
+        }
+        &:last-of-type {
+            .accordion-button.collapsed {
+                border-bottom-left-radius: $radius;
+                border-bottom-right-radius: $radius;
+            }
+        }
+    }
+    .accordion-header {
+        padding: 0;
+        border: 0;
+    }
+    .accordion-button.collapsed {
+        border-bottom-left-radius: $radius;
+        border-bottom-right-radius: $radius;
+    }
+    .accordion-button {
+        box-shadow: none;
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+        border: 1px solid $border-eee;
+        color: $sb-title-color;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 25px;
+        &:not(.collapsed) {
+            background-color: $body-bg; 
+        }
+        &:after {
+            content: "\ea4e";
+            background-image: none;
+            font-family: remixicon!important;
+            font-size: 18px;
+        }
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    .accordion-collapse {
+        border: 1px solid $border-eee;
+        border-top: 0;
+        border-bottom-left-radius: $radius;
+        border-bottom-right-radius: $radius;
+    }
+    .accordion-body {
+        font-size: 14px;
+        color: $text-777;
+        line-height: 26px;
+    }
+}
+
+/** Colord Accordiions **/
+.accordion {
+    .accordion-button.color-primary {
+        border: 1px solid #556fbd;
+        color: #556fbd;
+        &:not(.collapsed) {
+            background-color: #556fbd; 
+            color: $fff;
+        }
+    }
+    .accordion-collapse.color-primary {
+        border: 1px solid #556fbd;
+    }
+
+    .accordion-button.color-secondary {
+        border: 1px solid #ff4f7f;
+        color: #ff4f7f;
+        &:not(.collapsed) {
+            background-color: #ff4f7f; 
+            color: $fff;
+        }
+    }
+    .accordion-collapse.color-secondary {
+        border: 1px solid #ff4f7f;
+    }
+
+    .accordion-button.color-success {
+        border: 1px solid #2bbb93;
+        color: #2bbb93;
+        &:not(.collapsed) {
+            background-color: #2bbb93; 
+            color: $fff;
+        }
+    }
+    .accordion-collapse.color-success {
+        border: 1px solid #2bbb93;
+    }
+    
+    .accordion-button.color-info {
+        border: 1px solid #50d1f8;
+        color: #50d1f8;
+        &:not(.collapsed) {
+            background-color: #50d1f8; 
+            color: $fff;
+        }
+    }
+    .accordion-collapse.color-info {
+        border: 1px solid #50d1f8;
+    }
+    
+    .accordion-button.color-warning {
+        border: 1px solid #ffa04f;
+        color: #ffa04f;
+        &:not(.collapsed) {
+            background-color: #ffa04f; 
+            color: $fff;
+        }
+    }
+    .accordion-collapse.color-warning {
+        border: 1px solid #ffa04f;
+    }
+
+    .accordion-button.color-danger {
+        border: 1px solid #fb2f2f;
+        color: #fb2f2f;
+        &:not(.collapsed) {
+            background-color: #fb2f2f; 
+            color: $fff;
+        }
+    }
+    .accordion-collapse.color-danger {
+        border: 1px solid #fb2f2f;
+    }
+
+    .accordion-button.color-dark {
+        border: 1px solid #1d2531;
+        color: #1d2531;
+        &:not(.collapsed) {
+            background-color: #1d2531; 
+            color: $fff;
+        }
+    }
+    .accordion-collapse.color-dark {
+        border: 1px solid #1d2531;
+    }
+}
