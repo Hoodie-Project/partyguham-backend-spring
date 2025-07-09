@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="admin, dashboard, crm, analytics, ecommerce, team, vendor, ai chat bot, backend, panel" />
+	<meta name="description" content="Traditional Alcohol E-commerce Platform">
+	<meta name="author" content="partyguham">
+
+	<title>Party Guham - Admin Page</title>
+
+	<!-- App favicon -->
+	<link rel="shortcut icon" th:href="@{/assets/img/favicon/favicon.ico}">
+
+	<!-- Icon CSS -->
+	<link th:href="@{/assets/css/vendor/materialdesignicons.min.css}" rel="stylesheet">
+	<link th:href="@{/assets/css/vendor/remixicon.css}" rel="stylesheet">
+
+	<!-- Vendor CSS -->
+	<link th:href="@{/assets/css/vendor/datatables.bootstrap5.min.css}" rel="stylesheet">
+	<link th:href="@{/assets/css/vendor/responsive.datatables.min.css}" rel="stylesheet">
+	<link th:href="@{/assets/css/vendor/daterangepicker.css}" rel="stylesheet">
+	<link th:href="@{/assets/css/vendor/simplebar.css}" rel="stylesheet">
+	<link th:href="@{/assets/css/vendor/bootstrap.min.css}" rel="stylesheet">
+	<link th:href="@{/assets/css/vendor/apexcharts.css}" rel="stylesheet">
+	<link th:href="@{/assets/css/vendor/jquery-jvectormap-1.2.2.css}" rel="stylesheet">
+
+	<!-- Main CSS -->
+	<link id="main-css" th:href="@{/assets/css/style.css}" rel="stylesheet">
+
+</head>
+
+<body>
+<main class="wrapper sb-default">
+	<section class="auth-section anim">
+		<div class="gi-login-page">
+			<div class="container-fluid no-gutters">
+				<div class="row">
+					<div class="offset-lg-6 col-lg-6">
+						<div class="content-detail">
+							<div class="main-info">
+								<div class="hero-container">
+									<!-- Login form -->
+									<form class="login-form" th:action="@{/admin/signin}" method="post">
+										<div class="imgcontainer">
+											<a th:href="@{/admin}">
+												<img th:src="@{/assets/img/logo/full-logo-2.png}" alt="logo" class="logo" />
+											</a>
+										</div>
+										<div class="input-control">
+											<input type="text" placeholder="Enter Username" name="username"
+														 required />
+											<span class="password-field-show">
+													<input type="password" placeholder="Enter Password"
+																 name="password" class="password-field" value="" required />
+													<span data-toggle=".password-field"
+																class="fa fa-fw fa-eye field-icon toggle-password"></span>
+												</span>
+											<label class="label-container">Remember me
+												<input type="checkbox" name="remember-me" />
+												<span class="checkmark"></span>
+											</label>
+											<span class="psw"><a th:href="@{/forgot}" class="forgot-btn">Forgot
+														password?</a></span>
+											<div class="login-btns">
+												<button type="submit">Login</button>
+											</div>
+											<div class="division-lines">
+												<p>or login with</p>
+											</div>
+											<div class="login-with-btns">
+												<button type="button" class="google">
+													<i class="ri-google-fill"></i>
+												</button>
+												<button type="button" class="facebook">
+													<i class="ri-facebook-fill"></i>
+												</button>
+												<button type="button" class="twitter">
+													<i class="ri-twitter-fill"></i>
+												</button>
+												<button type="button" class="linkedin">
+													<i class="ri-linkedin-fill"></i>
+												</button>
+												<span class="already-acc">Not a member? <a th:href="@{/signup}"
+																																	 class="signup-btn">Sign up</a></span>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<!-- Vendor Custom -->
+<script th:src="@{/assets/js/vendor/jquery-3.6.4.min.js}"></script>
+<script th:src="@{/assets/js/vendor/simplebar.min.js}"></script>
+<script th:src="@{/assets/js/vendor/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/assets/js/vendor/apexcharts.min.js}"></script>
+<script th:src="@{/assets/js/vendor/jquery-jvectormap-1.2.2.min.js}"></script>
+<script th:src="@{/assets/js/vendor/jquery-jvectormap-world-mill-en.js}"></script>
+<!-- Data Tables -->
+<script th:src="@{/assets/js/vendor/jquery.datatables.min.js}"></script>
+<script th:src="@{/assets/js/vendor/datatables.bootstrap5.min.js}"></script>
+<script th:src="@{/assets/js/vendor/datatables.responsive.min.js}"></script>
+<!-- Caleddar -->
+<script th:src="@{/assets/js/vendor/jquery.simple-calendar.js}"></script>
+<!-- Date Range Picker -->
+<script th:src="@{/assets/js/vendor/moment.min.js}"></script>
+<script th:src="@{/assets/js/vendor/daterangepicker.js}"></script>
+<script th:src="@{/assets/js/vendor/date-range.js}"></script>
+
+<!-- Main Custom -->
+<script th:src="@{/assets/js/main.js}"></script>
+</body>
+
+</html>

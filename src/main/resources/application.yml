@@ -1,6 +1,6 @@
 spring:
   application:
-    name: yesul
+    name: partyguham
 
   profiles:
     active: ${SPRING_PROFILES_ACTIVE:local}
