@@ -4,4 +4,4 @@ spring:
     url: ${DEV_DATABASE_URL}
     username: ${DEV_DB_USERNAME}
     password: ${DEV_DB_PASSWORD}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: org.postgresql.Driver
