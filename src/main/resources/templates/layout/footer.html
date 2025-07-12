@@ -1,0 +1,13 @@
+<!-- Footer -->
+<footer th:fragment="footer">
+  <div class="container-fluid">
+    <div class="copyright">
+      <p><span id="copyright_year"></span> © Party Guham - admin, All rights Reserved.</p>
+      <p>Design by MaraviyaInfotech.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("copyright_year").textContent = new Date().getFullYear();
+</script>

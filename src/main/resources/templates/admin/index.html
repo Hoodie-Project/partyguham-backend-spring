@@ -12,14 +12,13 @@
 	</div>
 
 	<!-- 공통 헤더 -->
-	<div th:replace="layout/header :: header"></div>
-
+	<div th:replace="~{layout/header :: header}"></div>
 
 	<!-- 공통 사이드바 -->
-	<div th:replace="layout/sidebar :: sidebar"></div>
+	<div th:replace="~{layout/sidebar :: sidebar}"></div>
 
 	<!-- 공통 알림 사이드바 -->
-	<div th:replace="layout/notify-sidebar :: notify-sidebar"></div>
+	<div th:replace="~{layout/notify-sidebar :: notify-sidebar}"></div>
 
 	<!-- main content -->
 	<div class="gi-main-content">
@@ -29,7 +28,7 @@
 				<div class="gi-breadcrumb">
 					<h5>eCommerce</h5>
 					<ul>
-						<li><a href="index.html">Grabit</a></li>
+						<li><a th:href="@{admin}">Party Guham</a></li>
 						<li>eCommerce</li>
 					</ul>
 				</div>
@@ -431,9 +430,9 @@
 											</td>
 											<td>
 														<span class="cat">
-															<a href="product-list.html">Watches</a>
-															<a href="product-list.html">Clothes</a>
-															<a href="product-list.html">Phones</a>
+															<a th:href="@{admin}">Watches</a>
+															<a th:href="@{admin}">Clothes</a>
+															<a th:href="@{admin}">Phones</a>
 														</span>
 											</td>
 											<td>685</td>
@@ -445,67 +444,65 @@
 											</td>
 											<td>
 														<span class="cat">
-															<a href="product-list.html">Phone</a>
-															<a href="product-list.html">Camera</a>
-															<a href="product-list.html">Clothes</a>
-															<a href="product-list.html">Phones</a>
+															<a th:href="@{admin}">Phone</a>
+															<a th:href="@{admin}">Camera</a>
+															<a th:href="@{admin}">Clothes</a>
+															<a th:href="@{admin}">Phones</a>
 														</span>
 											</td>
 											<td>874</td>
 											<td>$1768</td>
 										</tr>
 										<tr>
-											<td><img class="cat-thumb" th:src="@{assets/img/clients/3.jpg}" alt="clients Image">
-												<span class="name">Night Lamp</span>
+											<td><img class="cat-thumb" th:src="@{assets/img/clients/3.jpg}"
+															 alt="clients Image"><span class="name">Night Lamp</span>
 											</td>
 											<td>
 														<span class="cat">
-															<a href="product-list.html">Laptop</a>
-															<a href="product-list.html">Furniture</a>
-															<a href="product-list.html">Phones</a>
+															<a th:href="@{admin}">Laptop</a>
+															<a th:href="@{admin}">Furniture</a>
+															<a th:href="@{admin}">Phones</a>
 														</span>
 											</td>
 											<td>95</td>
 											<td>$2296</td>
 										</tr>
 										<tr>
-											<td><img class="cat-thumb" th:src="@{assets/img/clients/4.jpg}" alt="clients Image">
-												<span class="name">Mens hoodie</span>
+											<td><img class="cat-thumb" th:src="@{assets/img/clients/4.jpg}"
+															 alt="clients Image"><span class="name">Mens hoodie</span>
 											</td>
 											<td>
 														<span class="cat">
-															<a href="product-list.html">Clothes</a>
-															<a href="product-list.html">Phones</a>
+															<a th:href="@{admin}">Clothes</a>
+															<a th:href="@{admin}">Phones</a>
 														</span>
 											</td>
 											<td>354</td>
 											<td>$2754</td>
 										</tr>
 										<tr>
-											<td>
-												<img class="cat-thumb" th:src="@{/assets/img/clients/5.jpg}" alt="clients Image">
-												<span class="name">Digital Watch</span>
+											<td><img class="cat-thumb" th:src="@{assets/img/clients/5.jpg}"
+															 alt="clients Image"><span class="name">Digital Watch</span>
 											</td>
 											<td>
 														<span class="cat">
-															<a href="product-list.html">Tools</a>
-															<a href="product-list.html">Clothes</a>
-															<a href="product-list.html">Bags</a>
+															<a th:href="@{admin}">Tools</a>
+															<a th:href="@{admin}">Clothes</a>
+															<a th:href="@{admin}">Bags</a>
 														</span>
 											</td>
 											<td>675</td>
 											<td>$3105</td>
 										</tr>
 										<tr>
-											<td>
-												<img class="cat-thumb" th:src="@{/assets/img/clients/6.jpg}" alt="clients Image">
-												<span class="name">DSLR Camera.</span>
+											<td><img class="cat-thumb" th:src="@{assets/img/clients/6.jpg}"
+															 alt="clients Image"><span class="name">DSLR Camera.</span>
 											</td>
 											<td>
 														<span class="cat">
-															<a href="product-list.html">Shoes</a>
-															<a href="product-list.html">Clothes</a>
-															<a href="product-list.html">Jewellery</a>
+															<a th:href="@{admin}">Shoes</a>
+															<a th:href="@{admin}">Clothes</a>
+															<a th:href="@{admin}">Jewellery</a>
 														</span>
 											</td>
 											<td>854</td>
@@ -545,9 +542,8 @@
 										</thead>
 										<tbody>
 										<tr>
-											<td>
-												<img class="cat-thumb" th:src="@{/assets/img/product/1.jpg}" alt="clients Image">
-												<span class="name">Mens t-shirt</span>
+											<td><img class="cat-thumb" th:src="@{assets/img/product/1.jpg}"
+															 alt="clients Image"><span class="name">Mens t-shirt</span>
 											</td>
 											<td>$16</td>
 											<td>162</td>
@@ -555,9 +551,8 @@
 											<td>$3524</td>
 										</tr>
 										<tr>
-											<td>
-												<img class="cat-thumb" th:src="@{/assets/img/product/2.jpg}" alt="clients Image">
-												<span class="name">Sofa chair</span>
+											<td><img class="cat-thumb" th:src="@{assets/img/product/2.jpg}"
+															 alt="clients Image"><span class="name">Sofa chair</span>
 											</td>
 											<td>$52</td>
 											<td>178</td>
@@ -565,9 +560,8 @@
 											<td>$8654</td>
 										</tr>
 										<tr>
-											<td>
-												<img class="cat-thumb" th:src="@{/assets/img/product/3.jpg}" alt="clients Image">
-												<span class="name">Night Lamp</span>
+											<td><img class="cat-thumb" th:src="@{assets/img/product/3.jpg}"
+															 alt="clients Image"><span class="name">Night Lamp</span>
 											</td>
 											<td>$70</td>
 											<td>198</td>
@@ -575,9 +569,8 @@
 											<td>$1152</td>
 										</tr>
 										<tr>
-											<td>
-												<img class="cat-thumb" th:src="@{/assets/img/product/4.jpg}" alt="clients Image">
-												<span class="name">Mens hoodie</span>
+											<td><img class="cat-thumb" th:src="@{assets/img/product/4.jpg}"
+															 alt="clients Image"><span class="name">Mens hoodie</span>
 											</td>
 											<td>$16</td>
 											<td>205</td>
@@ -585,9 +578,8 @@
 											<td>$5645</td>
 										</tr>
 										<tr>
-											<td>
-												<img class="cat-thumb" th:src="@{/assets/img/product/5.jpg}" alt="clients Image">
-												<span class="name">Digital Watch</span>
+											<td><img class="cat-thumb" th:src="@{assets/img/product/5.jpg}"
+															 alt="clients Image"><span class="name">Digital Watch</span>
 											</td>
 											<td>$559</td>
 											<td>209</td>
@@ -595,9 +587,8 @@
 											<td>$20546</td>
 										</tr>
 										<tr>
-											<td>
-												<img class="cat-thumb" th:src="@{/assets/img/product/6.jpg}" alt="clients Image">
-												<span class="name">DSLR Camera.</span>
+											<td><img class="cat-thumb" th:src="@{assets/img/product/6.jpg}"
+															 alt="clients Image"><span class="name">DSLR Camera.</span>
 											</td>
 											<td>$1546</td>
 											<td>212</td>
@@ -615,134 +606,12 @@
 		</div>
 	</div>
 
-	<!-- Footer -->
-	<footer>
-		<div class="container-fluid">
-			<div class="copyright">
-				<p><span id="copyright_year"></span> © Grabit, All rights Reserved.</p>
-				<p>Design by MaraviyaInfotech.</p>
-			</div>
-		</div>
-	</footer>
+	<!-- 푸터 -->
+	<div th:replace="~{layout/footer :: footer}"></div>
 
 	<!-- Feature tools -->
-	<div class="gi-tools-sidebar-overlay"></div>
-	<div class="gi-tools-sidebar">
-		<a href="javascript:void(0)" class="gi-tools-sidebar-toggle in-out">
-			<i class="ri-settings-4-line"></i>
-		</a>
-		<div class="gi-bar-title">
-			<h6>Tools</h6>
-			<a href="javascript:void(0)" class="close-tools"><i class="ri-close-line"></i></a>
-		</div>
-		<div class="gi-tools-detail">
-			<div class="gi-tools-block">
-				<h3>Modes</h3>
-				<div class="gi-tools-info">
-					<div class="gi-tools-item mode active" data-gi-mode-tool="light">
-						<img th:src="@{/assets/img/tools/light.png}" alt="light">
-						<p>light</p>
-					</div>
-					<div class="gi-tools-item mode" data-gi-mode-tool="dark">
-						<img th:src="@{/assets/img/tools/dark.png}" alt="dark">
-						<p>dark</p>
-					</div>
-				</div>
-			</div>
-			<div class="gi-tools-block">
-				<h3>Sidebar</h3>
-				<div class="gi-tools-info">
-					<div class="gi-tools-item sidebar" data-sidebar-mode-tool="light">
-						<img th:src="@{/assets/img/tools/side-light.png}" alt="light">
-						<p>light</p>
-					</div>
-					<div class="gi-tools-item sidebar active" data-sidebar-mode-tool="dark">
-						<img th:src="@{/assets/img/tools/side-dark.png}" alt="dark">
-						<p>dark</p>
-					</div>
-					<div class="gi-tools-item sidebar" data-sidebar-mode-tool="bg-1">
-						<img th:src="@{/assets/img/tools/side-bg-1.png}" alt="background">
-						<p>Bg-1</p>
-					</div>
-					<div class="gi-tools-item sidebar" data-sidebar-mode-tool="bg-2">
-						<img th:src="@{/assets/img/tools/side-bg-2.png}" alt="background">
-						<p>Bg-2</p>
-					</div>
-					<div class="gi-tools-item sidebar" data-sidebar-mode-tool="bg-3">
-						<img th:src="@{/assets/img/tools/side-bg-3.png}" alt="background">
-						<p>Bg-3</p>
-					</div>
-					<div class="gi-tools-item sidebar" data-sidebar-mode-tool="bg-4">
-						<img th:src="@{/assets/img/tools/side-bg-4.png}" alt="background">
-						<p>Bg-4</p>
-					</div>
-				</div>
-			</div>
-			<div class="gi-tools-block">
-				<h3>Header</h3>
-				<div class="gi-tools-info">
-					<div class="gi-tools-item header active" data-header-mode="light">
-						<img th:src="@{/assets/img/tools/header-light.png}" alt="light">
-						<p>light</p>
-					</div>
-					<div class="gi-tools-item header" data-header-mode="dark">
-						<img th:src="@{/assets/img/tools/header-dark.png}" alt="dark">
-						<p>dark</p>
-					</div>
-				</div>
-			</div>
-			<div class="gi-tools-block">
-				<h3>Backgrounds</h3>
-				<div class="gi-tools-info">
-					<div class="gi-tools-item bg active" data-bg-mode="default">
-						<img th:src="@{/assets/img/tools/bg-0.png}" alt="default">
-						<p>Default</p>
-					</div>
-					<div class="gi-tools-item bg" data-bg-mode="bg-1">
-						<img th:src="@{/assets/img/tools/bg-1.png}" alt="bg-1">
-						<p>Bg-1</p>
-					</div>
-					<div class="gi-tools-item bg" data-bg-mode="bg-2">
-						<img th:src="@{/assets/img/tools/bg-2.png}" alt="bg-2">
-						<p>Bg-2</p>
-					</div>
-					<div class="gi-tools-item bg" data-bg-mode="bg-3">
-						<img th:src="@{/assets/img/tools/bg-3.png}" alt="bg-3">
-						<p>Bg-3</p>
-					</div>
-					<div class="gi-tools-item bg" data-bg-mode="bg-4">
-						<img th:src="@{/assets/img/tools/bg-4.png}" alt="bg-4">
-						<p>Bg-4</p>
-					</div>
-					<div class="gi-tools-item bg" data-bg-mode="bg-5">
-						<img th:src="@{/assets/img/tools/bg-5.png}" alt="bg-5">
-						<p>Bg-5</p>
-					</div>
-				</div>
-			</div>
-			<div class="gi-tools-block">
-				<h3>Box Design</h3>
-				<div class="gi-tools-info">
-					<div class="gi-tools-item box active" data-box-mode-tool="default">
-						<img th:src="@{/assets/img/tools/box-0.png}" alt="default">
-						<p>Default</p>
-					</div>
-					<div class="gi-tools-item box" data-box-mode-tool="box-1">
-						<img th:src="@{/assets/img/tools/box-1.png}" alt="box-1">
-						<p>Box-1</p>
-					</div>
-					<div class="gi-tools-item box" data-box-mode-tool="box-2">
-						<img th:src="@{/assets/img/tools/box-2.png}" alt="box-2">
-						<p>Box-2</p>
-					</div>
-					<div class="gi-tools-item box" data-box-mode-tool="box-3">
-						<img th:src="@{/assets/img/tools/box-3.png}" alt="box-3">
-						<p>Box-3</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<div th:replace="~{layout/feature-tools :: feature-tools}"></div>
+
 </main>
 
 <!-- Vendor Custom -->

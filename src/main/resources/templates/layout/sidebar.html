@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<body>
 <!-- sidebar -->
 <div th:fragment="sidebar">
   <div class="gi-sidebar-overlay"></div>
   <div class="gi-sidebar" data-mode="dark">
     <div class="gi-sb-logo">
-      <a href="index.html" class="sb-full"><img src="assets/img/logo/logo2_primary.png" alt="logo"></a>
-      <a href="index.html" class="sb-collapse"><img src="assets/img/logo/collapse-logo.png" alt="logo"></a>
+      <a th:href="@{admin}" class="sb-full"><img th:src="@{assets/img/logo/logo2_primary.png}" alt="logo"></a>
+      <a href="index.html" class="sb-collapse"><img th:src="@{assets/img/logo/collapse-logo.png}" alt="logo"></a>
     </div>
     <div class="gi-sb-wrapper">
       <div class="gi-sb-content">
@@ -127,5 +124,3 @@
     </div>
   </div>
 </div>
-</body>
-</html>
