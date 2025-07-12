@@ -449,7 +449,7 @@ main {
 }
 
 .bg-primary {
-  background-color: #556fbd !important;
+  background-color: #21ECC7 !important;
 }
 
 .bg-secondary {
@@ -690,17 +690,17 @@ button.btn.btn-outline-success.dropdown-toggle.dropdown-toggle-split {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #556fbd;
+  background-color: #21ECC7;
   color: #fff;
   font-size: 14px;
-  border: 1px solid #556fbd;
+  border: 1px solid #21ECC7;
   border-radius: 30px;
   cursor: pointer;
 }
 .gi-btn-primary:hover, .gi-primary-btn:hover {
   background-color: #fff;
-  color: #556fbd;
-  border: 1px solid #556fbd;
+  color: #21ECC7;
+  border: 1px solid #21ECC7;
 }
 .gi-btn-primary:focus, .gi-primary-btn:focus {
   outline: none;
@@ -2506,7 +2506,7 @@ footer .copyright p {
   font-size: 11px;
   font-weight: 500;
   color: #fff;
-  background-color: #556fbd;
+  background-color: #21ECC7;
   border-radius: 30px;
 }
 .gi-notify-bar .gi-bar-content .tab-content {
@@ -2604,7 +2604,7 @@ footer .copyright p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #556fbd;
+  color: #21ECC7;
 }
 .gi-alert-list ul li {
   padding: 24px;
@@ -2679,7 +2679,7 @@ footer .copyright p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #556fbd;
+  color: #21ECC7;
 }
 .gi-message-list ul li {
   padding: 24px;
@@ -2735,7 +2735,7 @@ footer .copyright p {
   background-color: #9799a7;
 }
 .gi-message-list ul li .user .label.busy {
-  background-color: #556fbd;
+  background-color: #21ECC7;
 }
 .gi-message-list ul li .detail {
   width: calc(100% - 65px);
@@ -2765,7 +2765,7 @@ footer .copyright p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #556fbd;
+  color: #21ECC7;
 }
 .gi-activity-list ul li:not(:last-child) {
   margin-bottom: 50px !important;
@@ -2945,7 +2945,7 @@ Tools sidebar
   border: 1px solid #eee;
 }
 .gi-tools-sidebar .gi-tools-detail .gi-tools-block .gi-tools-info .gi-tools-item img:hover {
-  border: 1px solid #556fbd;
+  border: 1px solid #21ECC7;
 }
 .gi-tools-sidebar .gi-tools-detail .gi-tools-block .gi-tools-info .gi-tools-item.active {
   position: relative;
@@ -2973,7 +2973,7 @@ Tools sidebar
           justify-content: center;
 }
 .gi-tools-sidebar .gi-tools-detail .gi-tools-block .gi-tools-info .gi-tools-item.active img {
-  border-color: #556fbd;
+  border-color: #21ECC7;
 }
 
 .open-tools {
@@ -3150,7 +3150,7 @@ Tools sidebar
   cursor: pointer;
 }
 .gi-card .gi-card-header .header-tools .link {
-  color: #556fbd;
+  color: #21ECC7;
   font-size: 13px;
 }
 .gi-card .gi-card-header .header-tools .date {
@@ -3337,23 +3337,23 @@ Tools sidebar
   background-color: #e9ecef !important;
 }
 .daterangepicker li.active:hover {
-  background-color: #556fbd !important;
+  background-color: #21ECC7 !important;
 }
 .daterangepicker .ranges li {
   color: #777;
 }
 .daterangepicker .ranges li.active {
-  background-color: #556fbd;
+  background-color: #21ECC7;
   color: #fff;
 }
 .daterangepicker td.active {
-  background-color: #556fbd;
+  background-color: #21ECC7;
 }
 .daterangepicker td.active:hover {
-  background-color: #556fbd;
+  background-color: #21ECC7;
 }
 .daterangepicker .drp-buttons .btn-primary {
-  background-color: #556fbd;
+  background-color: #21ECC7;
 }
 .daterangepicker .calendar-table table {
   font-family: "Poppins, sans-serif";
@@ -3519,7 +3519,7 @@ Tools sidebar
 .activity-list ul li .date-time {
   padding: 5px 10px;
   background-color: rgba(72, 85, 104, 0.07);
-  color: #556fbd;
+  color: #21ECC7;
   border-radius: 30px;
   font-size: 15px;
   font-weight: 500;
@@ -3642,7 +3642,7 @@ Tools sidebar
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  border: 1px solid #556fbd;
+  border: 1px solid #21ECC7;
 }
 
 /* Responsive css */
@@ -4061,7 +4061,7 @@ table.dataTable td .cat a {
   margin: 5px;
   padding: 2px 5px;
   background-color: rgba(95, 105, 245, 0.1);
-  color: #556fbd;
+  color: #21ECC7;
   border-radius: 30px;
 }
 table.dataTable td .cat a:hover {
@@ -4330,7 +4330,7 @@ div.dataTables_wrapper div.dataTables_info {
 .calendar .day.today {
   background-color: rgba(101, 108, 241, 0.17);
   color: #fff;
-  color: #556fbd;
+  color: #21ECC7;
 }
 .calendar .day.today.has-event:after {
   background: #fff;
@@ -4500,7 +4500,7 @@ div.dataTables_wrapper div.dataTables_info {
   border-radius: 30px;
   font-size: 14px;
   font-weight: 600;
-  color: #556fbd;
+  color: #21ECC7;
 }
 .gi-event-list ul .date .day {
   font-size: 12px;
@@ -4849,7 +4849,7 @@ div.dataTables_wrapper div.dataTables_info {
   position: absolute;
   right: 15px;
   top: 0;
-  background: #556fbd;
+  background: #21ECC7;
   font-size: 10px;
   color: #fff;
 }
@@ -5133,7 +5133,7 @@ div.dataTables_wrapper div.dataTables_info {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  background: #556fbd;
+  background: #21ECC7;
   color: #fff;
   border-radius: 30px 0 30px 30px;
 }
@@ -5279,7 +5279,7 @@ div.dataTables_wrapper div.dataTables_info {
   height: 40px;
   margin-left: 15px;
   cursor: pointer;
-  background: #556fbd;
+  background: #21ECC7;
   color: #f5f5f5;
   border: 1px solid #eee;
   border-radius: 30px;
@@ -5451,7 +5451,7 @@ div.dataTables_wrapper div.dataTables_info {
 }
 
 .special.primary {
-  background: #556fbd;
+  background: #21ECC7;
 }
 
 .special.secondary {
@@ -5493,7 +5493,7 @@ div.dataTables_wrapper div.dataTables_info {
 }
 .gi-category .gi-cat-list table tbody tr td .gi-sub-cat-count {
   margin: 2px 0 2px 5px;
-  background-color: #556fbd;
+  background-color: #21ECC7;
   padding: 2px 7px;
   color: #fff;
   border-radius: 30px;
@@ -5926,7 +5926,7 @@ div.dataTables_wrapper div.dataTables_info {
 .gi-error-page .forgot-form .input-control input[type=email]:focus,
 .gi-error-page .forgot-form .input-control input[type=password]:focus {
   border-radius: 30px;
-  border-bottom: 2px solid #556fbd;
+  border-bottom: 2px solid #21ECC7;
   outline: none !important;
 }
 .gi-login-page .login-form .input-control input[type=text]::-webkit-input-placeholder, .gi-login-page .login-form .input-control input[type=email]::-webkit-input-placeholder, .gi-login-page .login-form .input-control input[type=password]::-webkit-input-placeholder, .gi-login-page .signup-form .input-control input[type=text]::-webkit-input-placeholder, .gi-login-page .signup-form .input-control input[type=email]::-webkit-input-placeholder, .gi-login-page .signup-form .input-control input[type=password]::-webkit-input-placeholder, .gi-login-page .forgot-form .input-control input[type=text]::-webkit-input-placeholder, .gi-login-page .forgot-form .input-control input[type=email]::-webkit-input-placeholder, .gi-login-page .forgot-form .input-control input[type=password]::-webkit-input-placeholder, .gi-error-page .login-form .input-control input[type=text]::-webkit-input-placeholder, .gi-error-page .login-form .input-control input[type=email]::-webkit-input-placeholder, .gi-error-page .login-form .input-control input[type=password]::-webkit-input-placeholder, .gi-error-page .signup-form .input-control input[type=text]::-webkit-input-placeholder, .gi-error-page .signup-form .input-control input[type=email]::-webkit-input-placeholder, .gi-error-page .signup-form .input-control input[type=password]::-webkit-input-placeholder, .gi-error-page .forgot-form .input-control input[type=text]::-webkit-input-placeholder, .gi-error-page .forgot-form .input-control input[type=email]::-webkit-input-placeholder, .gi-error-page .forgot-form .input-control input[type=password]::-webkit-input-placeholder {
@@ -6004,7 +6004,7 @@ div.dataTables_wrapper div.dataTables_info {
 .gi-login-page .forgot-form .input-control .label-container a, .gi-error-page .login-form .input-control .label-container a,
 .gi-error-page .signup-form .input-control .label-container a,
 .gi-error-page .forgot-form .input-control .label-container a {
-  color: #556fbd;
+  color: #21ECC7;
   font-weight: 600;
 }
 .gi-login-page .login-form .input-control .label-container:hover input ~ .checkmark,
@@ -6068,7 +6068,7 @@ div.dataTables_wrapper div.dataTables_info {
 .gi-login-page .forgot-form .input-control .label-container input:checked ~ .checkmark, .gi-error-page .login-form .input-control .label-container input:checked ~ .checkmark,
 .gi-error-page .signup-form .input-control .label-container input:checked ~ .checkmark,
 .gi-error-page .forgot-form .input-control .label-container input:checked ~ .checkmark {
-  background-color: #556fbd;
+  background-color: #21ECC7;
 }
 .gi-login-page .login-form .input-control .label-container input:checked ~ .checkmark:after,
 .gi-login-page .signup-form .input-control .label-container input:checked ~ .checkmark:after,
@@ -6091,7 +6091,7 @@ div.dataTables_wrapper div.dataTables_info {
 .gi-error-page .signup-form .input-control span.psw a,
 .gi-error-page .forgot-form .input-control span.psw a {
   font-size: 13px;
-  color: #556fbd;
+  color: #21ECC7;
   font-weight: 500;
   text-decoration: none;
   -webkit-transition: all 0.3s ease-in-out;
@@ -6116,7 +6116,7 @@ div.dataTables_wrapper div.dataTables_info {
 .gi-login-page .forgot-form .input-control .login-btns button, .gi-error-page .login-form .input-control .login-btns button,
 .gi-error-page .signup-form .input-control .login-btns button,
 .gi-error-page .forgot-form .input-control .login-btns button {
-  background-color: #556fbd;
+  background-color: #21ECC7;
   color: white;
   padding: 8px 15px;
   margin: 8px 0;
@@ -6134,8 +6134,8 @@ div.dataTables_wrapper div.dataTables_info {
 .gi-error-page .signup-form .input-control .login-btns button:hover,
 .gi-error-page .forgot-form .input-control .login-btns button:hover {
   background-color: transparent;
-  color: #556fbd;
-  border: 2px solid #556fbd;
+  color: #21ECC7;
+  border: 2px solid #21ECC7;
 }
 .gi-login-page .login-form .input-control .division-lines,
 .gi-login-page .signup-form .input-control .division-lines,
@@ -6338,7 +6338,7 @@ div.dataTables_wrapper div.dataTables_info {
 .gi-error-page .signup-form .input-control .login-with-btns .already-acc a,
 .gi-error-page .forgot-form .input-control .login-with-btns .already-acc a {
   padding: 0 5px;
-  color: #556fbd;
+  color: #21ECC7;
   background-color: transparent;
   text-decoration: none;
   font-weight: 600;
@@ -6865,7 +6865,7 @@ div.dataTables_wrapper div.dataTables_info {
   line-break: anywhere;
 }
 .vendor-details ul li a:hover {
-  color: #556fbd;
+  color: #21ECC7;
 }
 .vendor-details ul li strong {
   margin-right: 10px;
@@ -7793,15 +7793,15 @@ div.dataTables_wrapper div.dataTables_info {
 
 /** Colord Accordiions **/
 .accordion .accordion-button.color-primary {
-  border: 1px solid #556fbd;
-  color: #556fbd;
+  border: 1px solid #21ECC7;
+  color: #21ECC7;
 }
 .accordion .accordion-button.color-primary:not(.collapsed) {
-  background-color: #556fbd;
+  background-color: #21ECC7;
   color: #fff;
 }
 .accordion .accordion-collapse.color-primary {
-  border: 1px solid #556fbd;
+  border: 1px solid #21ECC7;
 }
 .accordion .accordion-button.color-secondary {
   border: 1px solid #ff4f7f;
@@ -7895,7 +7895,7 @@ div.dataTables_wrapper div.dataTables_info {
 
 .swal2-popup {
   padding: 30px;
-  border-bottom: 5px solid #556fbd;
+  border-bottom: 5px solid #21ECC7;
 }
 .swal2-popup .swal2-icon {
   margin: 0 auto 30px auto;
@@ -7915,7 +7915,7 @@ div.dataTables_wrapper div.dataTables_info {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
 }
 .swal2-popup .swal2-confirm {
-  background-color: #556fbd;
+  background-color: #21ECC7;
 }
 .swal2-popup .swal2-confirm:focus {
   outline: none;
