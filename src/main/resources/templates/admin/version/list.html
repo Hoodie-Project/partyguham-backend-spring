@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<!-- 공통 헤드 -->
+<head th:replace="~{layout/head :: head}"></head>
+
+<body>
+<main class="wrapper sb-default">
+  <!-- Loader -->
+  <div id="gi-overlay">
+    <div class="loader"></div>
+  </div>
+
+  <!-- 공통 헤더 -->
+  <div th:replace="~{layout/header :: header}"></div>
+
+  <!-- 공통 사이드바 -->
+  <div th:replace="~{layout/sidebar :: sidebar}"></div>
+
+  <!-- main content -->
+  <div class="gi-main-content">
+    <div class="container-fluid">
+      <!-- Page title & breadcrumb -->
+      <div class="gi-page-title gi-page-title-2">
+        <div class="gi-breadcrumb">
+          <h5>버전 관리</h5>
+          <ul>
+            <li><a href="/admin">관리자</a></li>
+            <li>버전 목록</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container mt-4">
+        <h2>버전 목록</h2>
+        <a class="btn btn-primary mb-3" th:href="@{/admin/versions/new}">+ 새 버전 추가</a>
+
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th>ID</th>
+            <th>플랫폼</th>
+            <th>최신버전</th>
+            <th>최소필수버전</th>
+            <th>강제 업데이트</th>
+            <th>다운로드 URL</th>
+            <th>관리</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr th:each="version : ${versions.content}">
+            <td th:text="${version.id}"></td>
+            <td th:text="${version.platform}"></td>
+            <td th:text="${version.latestVersion}"></td>
+            <td th:text="${version.minRequiredVersion}"></td>
+            <td th:text="${version.isForceUpdate}"></td>
+            <td th:text="${version.downloadUrl}"></td>
+            <td>
+              <a th:href="@{/admin/versions/{id}/edit(id=${version.id})}" class="btn btn-sm btn-warning">수정</a>
+              <form th:action="@{/admin/versions/{id}/delete(id=${version.id})}" method="post"
+                    th:onsubmit="return confirm('정말 삭제하시겠습니까?');" style="display:inline;">
+                <button type="submit" class="btn btn-sm btn-danger">삭제</button>
+              </form>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <!-- 페이징 영역 -->
+        <div class="pagination mt-4 d-flex justify-content-between align-items-center">
+          <div>
+            <span
+              th:text="'총 ' + ${versions.totalElements} + '개 / 페이지 ' + (${versions.number} + 1) + ' / ' + ${versions.totalPages}"></span>
+          </div>
+
+          <div>
+            <ul class="pagination mb-0">
+              <!-- 이전 페이지 -->
+              <li class="page-item" th:classappend="${!versions.hasPrevious()} ? 'disabled'">
+                <a class="page-link"
+                   th:href="@{/admin/versions(page=${versions.number - 1}, size=${versions.size})}">이전</a>
+              </li>
+
+              <!-- 10개 단위 페이지 번호 -->
+              <li class="page-item"
+                  th:each="pageNum : ${#numbers.sequence((versions.number / 10) * 10, T(java.lang.Math).min(((versions.number / 10) * 10 + 9), versions.totalPages - 1))}"
+                  th:classappend="${pageNum == versions.number} ? 'active'">
+                <a class="page-link" th:href="@{/admin/versions(page=${pageNum}, size=${versions.size})}"
+                   th:text="${pageNum + 1}"></a>
+              </li>
+
+              <!-- 다음 페이지 -->
+              <li class="page-item" th:classappend="${!versions.hasNext()} ? 'disabled'">
+                <a class="page-link"
+                   th:href="@{/admin/versions(page=${versions.number + 1}, size=${versions.size})}">다음</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 공통 알림 사이드바 -->
+  <div th:replace="~{layout/notify-sidebar :: notify-sidebar}"></div>
+
+  <!-- 푸터 -->
+  <div th:replace="~{layout/footer :: footer}"></div>
+
+  <!-- Feature tools -->
+  <div th:replace="~{layout/feature-tools :: feature-tools}"></div>
+</main>
+
+<!-- Vendor Custom -->
+<script th:src="@{/assets/js/vendor/jquery-3.6.4.min.js}"></script>
+<script th:src="@{/assets/js/vendor/simplebar.min.js}"></script>
+<script th:src="@{/assets/js/vendor/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/assets/js/vendor/apexcharts.min.js}"></script>
+<script th:src="@{/assets/js/vendor/jquery-jvectormap-1.2.2.min.js}"></script>
+<script th:src="@{/assets/js/vendor/jquery-jvectormap-world-mill-en.js}"></script>
+<script th:src="@{/assets/js/vendor/owl.carousel.min.js}"></script>
+
+<!-- Data Tables -->
+<script th:src="@{/assets/js/vendor/jquery.datatables.min.js}"></script>
+<script th:src="@{/assets/js/vendor/datatables.bootstrap5.min.js}"></script>
+<script th:src="@{/assets/js/vendor/datatables.responsive.min.js}"></script>
+
+<!-- Calendar -->
+<script th:src="@{/assets/js/vendor/jquery.simple-calendar.js}"></script>
+
+<!-- Date Range Picker -->
+<script th:src="@{/assets/js/vendor/moment.min.js}"></script>
+<script th:src="@{/assets/js/vendor/daterangepicker.js}"></script>
+<script th:src="@{/assets/js/vendor/date-range.js}"></script>
+
+<!-- Main Custom -->
+<script th:src="@{/assets/js/main.js}"></script>
+<script th:src="@{/assets/js/data/ecommerce-chart-data.js}"></script>
+</body>
+
+</html>

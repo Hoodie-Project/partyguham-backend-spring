@@ -1,7 +1,7 @@
 spring:
   # 로컬 개발용 데이터베이스 설정
   datasource:
-    url: jdbc:postgresql://localhost:3306/party?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
-    username: ${DB_USERNAME:root}
+    url: jdbc:postgresql://localhost:5432/party?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
+    username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver

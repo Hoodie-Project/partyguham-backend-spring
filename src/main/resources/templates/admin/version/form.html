@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<!-- 공통 헤드 -->
+<head th:replace="~{layout/head :: head}"></head>
+
+<body>
+<main class="wrapper sb-default">
+  <!-- Loader -->
+  <div id="gi-overlay">
+    <div class="loader"></div>
+  </div>
+
+  <!-- 공통 헤더 -->
+  <div th:replace="~{layout/header :: header}"></div>
+
+  <!-- 공통 사이드바 -->
+  <div th:replace="~{layout/sidebar :: sidebar}"></div>
+
+  <!-- main content -->
+  <div class="gi-main-content">
+    <div class="container-fluid">
+      <!-- Page title & breadcrumb -->
+      <div class="gi-page-title gi-page-title-2">
+        <div class="gi-breadcrumb">
+          <h5>Todo</h5>
+          <ul>
+            <li><a href="index.html">Grabit</a></li>
+            <li>Todo</li>
+          </ul>
+        </div>
+      </div>
+      <!-- main content -->
+      <div class="container mt-4">
+        <h2 th:text="${version.id != null ? '버전 수정' : '버전 추가'}"></h2>
+
+        <form th:action="@{${version.id != null} ? '/admin/versions/' + ${version.id} : '/admin/versions'}" method="post">
+          <div class="mb-3">
+            <label for="platform">플랫폼</label>
+            <input type="text" class="form-control" id="platform" name="platform" th:value="${version.platform}" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="latestVersion">최신 버전</label>
+            <input type="text" class="form-control" id="latestVersion" name="latestVersion" th:value="${version.latestVersion}" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="minRequiredVersion">최소 필수 버전</label>
+            <input type="text" class="form-control" id="minRequiredVersion" name="minRequiredVersion" th:value="${version.minRequiredVersion}">
+          </div>
+
+          <div class="mb-3">
+            <label for="downloadUrl">다운로드 URL</label>
+            <input type="text" class="form-control" id="downloadUrl" name="downloadUrl" th:value="${version.downloadUrl}">
+          </div>
+
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="isForceUpdate" name="forceUpdate" th:checked="${version.isForceUpdate}">
+            <label class="form-check-label" for="isForceUpdate">강제 업데이트 여부</label>
+          </div>
+
+          <div class="mb-3">
+            <label for="releaseNotes">릴리즈 노트</label>
+            <textarea class="form-control" id="releaseNotes" name="releaseNotes" rows="4" th:text="${version.releaseNotes}"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">저장</button>
+          <a th:href="@{/admin/versions}" class="btn btn-secondary">목록</a>
+        </form>
+      </div>
+      <!-- main content -->
+    </div>
+  </div>
+
+  <!-- 공통 알림 사이드바 -->
+  <div th:replace="~{layout/notify-sidebar :: notify-sidebar}"></div>
+
+  <!-- 푸터 -->
+  <div th:replace="~{layout/footer :: footer}"></div>
+
+  <!-- Feature tools -->
+  <div th:replace="~{layout/feature-tools :: feature-tools}"></div>
+
+</main>
+
+<!-- Vendor Custom -->
+<script th:src="@{/assets/js/vendor/jquery-3.6.4.min.js}"></script>
+<script th:src="@{/assets/js/vendor/simplebar.min.js}"></script>
+<script th:src="@{/assets/js/vendor/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/assets/js/vendor/apexcharts.min.js}"></script>
+<script th:src="@{/assets/js/vendor/jquery-jvectormap-1.2.2.min.js}"></script>
+<script th:src="@{/assets/js/vendor/jquery-jvectormap-world-mill-en.js}"></script>
+<script th:src="@{/assets/js/vendor/owl.carousel.min.js}"></script>
+
+<!-- Data Tables -->
+<script th:src="@{/assets/js/vendor/jquery.datatables.min.js}"></script>
+<script th:src="@{/assets/js/vendor/datatables.bootstrap5.min.js}"></script>
+<script th:src="@{/assets/js/vendor/datatables.responsive.min.js}"></script>
+
+<!-- Calendar -->
+<script th:src="@{/assets/js/vendor/jquery.simple-calendar.js}"></script>
+
+<!-- Date Range Picker -->
+<script th:src="@{/assets/js/vendor/moment.min.js}"></script>
+<script th:src="@{/assets/js/vendor/daterangepicker.js}"></script>
+<script th:src="@{/assets/js/vendor/date-range.js}"></script>
+
+<!-- Main Custom -->
+<script th:src="@{/assets/js/main.js}"></script>
+<script th:src="@{/assets/js/data/ecommerce-chart-data.js}"></script>
+</body>
+
+</html>
